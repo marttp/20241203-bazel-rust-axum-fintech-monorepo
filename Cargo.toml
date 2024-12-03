@@ -1,0 +1,16 @@
+[package]
+name = "fintech_monorepo"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+transaction_core = { path = "transaction_core"}
+axum = "0.7.9"
+serde = { version = "1.0.210", features = ["derive"] }
+tokio = { version = "1.40.0", features = ["full"] }
+
+[workspace]
+members = [
+    ".",
+    "transaction_core",
+]
